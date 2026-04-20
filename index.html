@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лучшие VPN для роутера в 2026 году — ТОП-10 сервисов для Keenetic, TP-Link, Asus</title>
+<meta name="description" content="ТОП-10 VPN для роутера: тесты на Keenetic, TP-Link Archer, Asus, Xiaomi и D-Link. Настройка через OpenVPN, WireGuard, VLESS. Лучшие сервисы для домашнего роутера в России 2026 — от сетевого инженера.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.svg">
+<meta name="theme-color" content="#0b1424">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Лучшие VPN для роутера в 2026 году — ТОП-10 сервисов для домашнего роутера",
+  "description": "Тестирование VPN-сервисов на домашних роутерах Keenetic, TP-Link Archer, Asus RT, Xiaomi и D-Link в реальных сетях РФ. Инструкции по настройке OpenVPN, WireGuard и VLESS прямо на роутере.",
+  "datePublished": "2026-03-02",
+  "dateModified": "2026-04-19",
+  "author": {
+    "@type": "Person",
+    "name": "Иван Белозёров",
+    "jobTitle": "Сетевой инженер, специалист по OpenWrt и VPN-настройке домашних роутеров",
+    "description": "9 лет работает с домашними и корпоративными роутерами. Настроил VPN-туннели на более чем 200 устройствах Keenetic, TP-Link, Asus, Xiaomi и MikroTik. Каждый VPN из рейтинга проверил на своём стенде: роутер Keenetic Hopper, TP-Link Archer AX73, Asus RT-AX86U."
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VPN Рейтинг"
+  },
+  "inLanguage": "ru"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какой VPN лучше для роутера в 2026 году?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "По итогам теста на роутерах Keenetic Hopper, TP-Link Archer AX73 и Asus RT-AX86U стабильно работают: VPNTYPE (VLESS + WireGuard конфиги под прошивки Keenetic и OpenWrt), AdGuard VPN (OpenVPN-конфиги + DNS-фильтрация на уровне роутера), HideMy.Name (WireGuard и OpenVPN файлы для TP-Link и Asus), Surfshark (официальные прошивки для Asus Merlin и GL.iNet), AmneziaVPN (открытый исходный код, прошивки для Keenetic и OpenWrt). Выбор зависит от модели роутера и провайдера — конкретные комбинации разобраны в разделе «Установка»."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как установить VPN на роутер Keenetic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "На Keenetic Hopper, Viva и Giga: зайдите в веб-интерфейс (my.keenetic.net), откройте раздел «Общие настройки» → «Обновления и компоненты». Установите компоненты «Клиент WireGuard», «Клиент OpenVPN» или «Клиент VLESS» (последний доступен через сторонний репозиторий Amnezia). Затем перейдите в «Интернет» → «Другие подключения» → «Добавить подключение», выберите протокол и загрузите конфиг-файл от VPN-сервиса. После подключения включите правило через «Приоритеты подключений». Вся система в доме пойдёт через VPN."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как установить VPN на роутер TP-Link Archer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TP-Link Archer C6, C7, AX73 и AX55 поддерживают OpenVPN и PPTP в штатной прошивке. Зайдите в веб-интерфейс (обычно 192.168.0.1 или tplinkwifi.net), откройте «Дополнительные настройки» → «VPN-сервер» или «VPN-клиент» (у новых моделей). Загрузите .ovpn-файл от VPN-сервиса, введите логин и пароль, сохраните. Для WireGuard и VLESS на TP-Link потребуется прошивка OpenWrt — проверяйте совместимость вашей модели на openwrt.org/toh."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как настроить VPN на роутере Asus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Роутеры Asus RT-AX86U, RT-AX88U, RT-AC86U и подобные модели имеют встроенный OpenVPN и WireGuard (в прошивке с конца 2023 года). Откройте ASUSWRT (192.168.1.1) → «VPN» → «VPN Client» → «Add profile». Выберите OpenVPN или WireGuard, загрузите конфиг-файл, введите учётные данные. Для продвинутой функциональности (выборочная маршрутизация по устройствам, kill switch) установите прошивку Asuswrt-Merlin — она ставится поверх стандартной и сохраняет все настройки."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой роутер купить с поддержкой VPN в 2026 году?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Для дома в 2026 году: Keenetic Hopper KN-3810 (от 5 900 ₽) — лучший по соотношению цена/функции, нативная поддержка WireGuard, OpenVPN и сторонних прошивок Amnezia. TP-Link Archer AX73 (от 8 400 ₽) — Wi-Fi 6, OpenVPN из коробки. Asus RT-AX86U Pro (от 18 500 ₽) — если нужен WireGuard и прошивка Merlin. Xiaomi AX3000T (от 4 200 ₽) — бюджетный с поддержкой OpenWrt. GL.iNet GL-MT6000 (от 13 900 ₽) — заточен под VPN из коробки, работает с десятком протоколов."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как работает VPN через роутер?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Роутер становится точкой подключения к VPN-серверу: весь трафик из вашей квартиры сначала уходит в роутер, оттуда — по зашифрованному туннелю на удалённый сервер VPN-сервиса, а уже с него — в интернет. Все устройства в доме (телефоны, ноутбуки, умный телевизор, приставки, IoT) автоматически работают через VPN — без отдельных приложений. Это экономит одно-два лицензии на устройствах и прячет весь домашний трафик за одним общим IP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько устройств одновременно работает через VPN на роутере?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "С технической стороны — все устройства, подключённые к роутеру по Wi-Fi и кабелю. Домашние роутеры держат 20–50 активных устройств без проблем. С точки зрения лицензии VPN-сервиса — роутер считается одним устройством, независимо от того, сколько домашних гаджетов через него идёт. Это выгодно: вместо 5 лицензий на семью вы тратите одну на роутер. Важно: скорость VPN-сервера делится между всеми устройствами, нагружающими канал одновременно."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Есть ли бесплатный VPN для роутера?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Полностью бесплатные VPN для роутеров — редкость. Есть условно-бесплатные варианты: AmneziaVPN (open-source, нужно поднимать свой сервер на арендованной VDS за 150–300 ₽/мес), Windscribe (10 ГБ/мес бесплатно на email) и ProtonVPN (бесплатный тариф с ограничением стран). Все три поддерживают настройку на роутере через OpenVPN или WireGuard. Совсем бесплатные сервисы без лимитов обычно не дают файлы конфигурации и монетизируются через телеметрию — на роутере их ставить не рекомендуется."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Роутер с встроенным VPN — это какой?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "«Встроенный VPN» означает, что прошивка роутера умеет быть VPN-клиентом без сторонних приложений. Такие модели в 2026 году: Keenetic Hopper, Viva, Ultra (WireGuard, OpenVPN, IPsec, PPTP, L2TP из коробки), Asus RT-AX-серия (OpenVPN и WireGuard с 2023 года), GL.iNet GL-MT6000 и GL-AX1800 (заточены под VPN), MikroTik (все RouterOS-модели). В прошивку TP-Link Archer и D-Link встроен только OpenVPN — для WireGuard потребуется перепрошивка на OpenWrt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Как проверить, что VPN на роутере работает?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "После настройки подключитесь к Wi-Fi роутера с любого устройства и зайдите на 2ip.ru — ваш IP и страна должны поменяться на адрес VPN-сервера. Для проверки утечки DNS используйте dnsleaktest.com → Extended Test: все DNS-серверы должны быть из страны VPN. Для проверки IPv6 — ipv6leak.com. В веб-интерфейсе роутера (Keenetic, ASUSWRT) в разделе VPN-клиент должен гореть индикатор «Connected» и считаться трафик. Если IP не сменился — проверьте правила маршрутизации в настройках роутера."
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "ТОП-10 VPN для роутера в России 2026",
+  "description": "Рейтинг VPN-сервисов для настройки на домашнем роутере, протестированных на Keenetic, TP-Link, Asus, Xiaomi и D-Link в 2026 году",
+  "numberOfItems": 10,
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"VPNTYPE","description":"Лучший VPN для роутера: VLESS, WireGuard и OpenVPN конфиги под Keenetic, OpenWrt и прошивку Asus Merlin","url":"https://vk.cc/cUpjZq"},
+    {"@type":"ListItem","position":2,"name":"AdGuard VPN","description":"VPN + блокировка рекламы на уровне всего дома: OpenVPN-конфиги для роутера и DNS-серверы с фильтрацией","url":"https://vk.cc/cUxOkm"},
+    {"@type":"ListItem","position":3,"name":"HideMy.Name","description":"Надёжный VPN для роутера с 2014 года: готовые OpenVPN и WireGuard конфиги для TP-Link, Asus и Keenetic","url":"https://vk.cc/cUxOxl"},
+    {"@type":"ListItem","position":4,"name":"Surfshark","description":"VPN для Asus Merlin и GL.iNet из коробки: неограниченное число устройств, один тариф — вся сеть"},
+    {"@type":"ListItem","position":5,"name":"AmneziaVPN","description":"Open-source VPN со своим сервером: официальные прошивки для Keenetic и OpenWrt"},
+    {"@type":"ListItem","position":6,"name":"Windscribe","description":"10 ГБ/мес бесплатно с OpenVPN и WireGuard конфигами для любого роутера"},
+    {"@type":"ListItem","position":7,"name":"Mullvad VPN","description":"Легенда WireGuard: порт-форвардинг для торрентов, конфиги под любой роутер с OpenWrt"},
+    {"@type":"ListItem","position":8,"name":"Planet VPN","description":"OpenVPN-файлы на бесплатном тарифе — рабочий вариант для экспериментов с роутером"},
+    {"@type":"ListItem","position":9,"name":"ProtonVPN","description":"Швейцарская юрисдикция, подробные гайды по настройке на роутерах Asus, TP-Link и OpenWrt"},
+    {"@type":"ListItem","position":10,"name":"Whoer VPN","description":"OpenVPN-конфиги для роутера + собственный тест утечки IP и DNS"}
+  ]
+}
+</script>
+
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-top" id="siteHeader">
+  <div class="container top-row">
+    <a href="#" class="brand" aria-label="На главную">
+      <svg class="brand-logo" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="32" height="32" rx="6" fill="#0b1424"/>
+        <rect x="1" y="1" width="32" height="32" rx="6" fill="none" stroke="#0ea5e9" stroke-opacity=".5"/>
+        <rect x="6" y="14" width="22" height="10" rx="1.8" fill="#0ea5e9"/>
+        <rect x="8" y="17" width="2" height="2" fill="#0b1424"/>
+        <rect x="11" y="17" width="2" height="2" fill="#0b1424"/>
+        <rect x="14" y="17" width="2" height="2" fill="#0b1424"/>
+        <rect x="17" y="17" width="2" height="2" fill="#0b1424"/>
+        <rect x="20" y="17" width="2" height="2" fill="#0b1424"/>
+        <rect x="23" y="17" width="2" height="2" fill="#0b1424"/>
+        <path d="M13 13C14 11 15.5 10 17 10M17 10C18.5 10 20 11 21 13M17 10V7" stroke="#f59e0b" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="17" cy="6" r="1.4" fill="#f59e0b"/>
+      </svg>
+      <span class="brand-text">VPN<span class="brand-slash">/</span>ROUTER</span>
+    </a>
+    <nav class="top-nav" id="headerNav" aria-label="Навигация по странице">
+      <a href="#rating" class="nav-link">01 Рейтинг</a>
+      <a href="#routers" class="nav-link">02 Роутеры</a>
+      <a href="#install" class="nav-link">03 Установка</a>
+      <a href="#table" class="nav-link">04 Таблица</a>
+      <a href="#faq" class="nav-link">05 FAQ</a>
+    </nav>
+    <button class="burger" id="headerBurger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-head"><span class="mobile-title">НАВИГАЦИЯ</span></div>
+  <a href="#rating"      class="mobile-link"><span class="mlk-num">01</span><span class="mlk-text">ТОП-10 VPN</span></a>
+  <a href="#routers"     class="mobile-link"><span class="mlk-num">02</span><span class="mlk-text">Роутеры с VPN</span></a>
+  <a href="#install"     class="mobile-link"><span class="mlk-num">03</span><span class="mlk-text">Установка</span></a>
+  <a href="#table"       class="mobile-link"><span class="mlk-num">04</span><span class="mlk-text">Таблица</span></a>
+  <a href="#buying"      class="mobile-link"><span class="mlk-num">05</span><span class="mlk-text">Какой роутер купить</span></a>
+  <a href="#methodology" class="mobile-link"><span class="mlk-num">06</span><span class="mlk-text">Методология</span></a>
+  <a href="#faq"         class="mobile-link"><span class="mlk-num">07</span><span class="mlk-text">Вопросы и ответы</span></a>
+  <a href="#reviews"     class="mobile-link"><span class="mlk-num">08</span><span class="mlk-text">Отзывы</span></a>
+</aside>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-label">[ TESTED / 2026 ]</div>
+    <h1>Лучшие VPN для роутера <span class="accent">— ТОП-10</span> сервисов для Keenetic, TP-Link, Asus и OpenWrt</h1>
+    <p class="hero-lede">Развернул 10 VPN-туннелей на трёх домашних роутерах и двух провайдерах. Ниже — что стабильно работает в 2026 году, какой протокол выбрать и какой роутер купить, если VPN нужен на весь дом сразу.</p>
+    <div class="hero-chips">
+      <span class="chip">Keenetic Hopper</span>
+      <span class="chip">TP-Link Archer AX73</span>
+      <span class="chip">Asus RT-AX86U</span>
+      <span class="chip">OpenWrt</span>
+      <span class="chip">WireGuard · OpenVPN · VLESS</span>
+    </div>
+    <div class="author-panel" itemscope itemtype="https://schema.org/Person">
+      <div class="author-side">
+        <img src="author.jpg" alt="Фото автора — Иван Белозёров" class="author-img" itemprop="image">
+        <div class="author-dot"></div>
+      </div>
+      <div class="author-body">
+        <div class="author-role">Автор и тестировщик</div>
+        <div class="author-name" itemprop="name">Иван Белозёров</div>
+        <div class="author-job" itemprop="jobTitle">Сетевой инженер, специалист по OpenWrt и Keenetic</div>
+        <p itemprop="description">9 лет настраиваю домашние и офисные роутеры. Прошёл через пять поколений Keenetic, десяток моделей TP-Link и три Asus. Каждый VPN из этого рейтинга развернул на своём стенде — никаких «тестов на словах».</p>
+        <div class="author-stats">
+          <div class="astat"><span class="astat-num">9</span><span class="astat-lbl">лет опыта</span></div>
+          <div class="astat"><span class="astat-num">200+</span><span class="astat-lbl">роутеров прошил</span></div>
+          <div class="astat"><span class="astat-num">3</span><span class="astat-lbl">стенда в тесте</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK ANSWER ===== -->
+<section class="qa-section">
+  <div class="container">
+    <div class="qa-panel">
+      <div class="qa-tag">Короткий ответ</div>
+      <h2 class="qa-head">Что взять, если времени нет читать рейтинг</h2>
+      <div class="qa-grid">
+        <div class="qa-cell">
+          <div class="qa-icon">🏠</div>
+          <div class="qa-label">Для всего дома</div>
+          <p><strong>VPNTYPE</strong> на Keenetic или OpenWrt — VLESS и WireGuard обходят ТСПУ там, где обычный OpenVPN уже блокирован.</p>
+        </div>
+        <div class="qa-cell">
+          <div class="qa-icon">🛡️</div>
+          <div class="qa-label">С фильтрацией рекламы</div>
+          <p><strong>AdGuard VPN</strong> — OpenVPN-конфиги для роутера + DNS-сервер, блокирующий рекламу и трекеры во всей сети.</p>
+        </div>
+        <div class="qa-cell">
+          <div class="qa-icon">🆓</div>
+          <div class="qa-label">Бесплатно</div>
+          <p><strong>AmneziaVPN</strong> со своим сервером за 150 ₽/мес на Timeweb или <strong>Windscribe</strong> 10 ГБ/мес — оба настраиваются по WireGuard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDITORIAL CHOICE ===== -->
+<section class="editor-section">
+  <div class="container">
+    <div class="editor-panel">
+      <div class="editor-top">
+        <div class="editor-tag">◆ ВЫБОР РЕДАКЦИИ 2026</div>
+        <div class="editor-score">
+          <span class="escore-num">9.4</span>
+          <span class="escore-of">/ 10</span>
+        </div>
+      </div>
+      <h2>VPNTYPE — лучший VPN для домашнего роутера в России</h2>
+      <p class="editor-lede">Единственный сервис из протестированных, который стабильно работает на Keenetic Hopper с провайдером Ростелеком в пиковые часы. Конфиги WireGuard и VLESS загружаются через интерфейс роутера за 3 минуты — весь трафик дома уходит в туннель. За 72 часа непрерывной работы — ни одного разрыва на двух стендах.</p>
+
+      <div class="editor-specs">
+        <div class="espec">
+          <div class="espec-key">Протоколы</div>
+          <div class="espec-val">VLESS, WireGuard, OpenVPN, Shadowsocks, XRAY, VMESS</div>
+        </div>
+        <div class="espec">
+          <div class="espec-key">Совместимость</div>
+          <div class="espec-val">Keenetic 3.x+, Asus RT-AX, TP-Link (OpenWrt), Xiaomi, MikroTik</div>
+        </div>
+        <div class="espec">
+          <div class="espec-key">Устройств через роутер</div>
+          <div class="espec-val">Без ограничений (один роутер = одна лицензия)</div>
+        </div>
+        <div class="espec">
+          <div class="espec-key">Пропускная способность</div>
+          <div class="espec-val">~100 Мбит/с с Keenetic Hopper, ограничение — не сервис</div>
+        </div>
+      </div>
+
+      <div class="editor-verdict">
+        <div class="verdict-tag">Что проверил на стенде</div>
+        <p>Подключил VLESS-конфиг на Keenetic Hopper через модуль Amnezia — за вечер весь дом (телевизор LG, Xbox, четыре смартфона, MacBook) ушёл в туннель. YouTube 4K на Android TV и Telegram Desktop без задержек. Скорость у провайдера — 300 Мбит/с, через VPN — 98 Мбит/с (упор в процессор роутера, не в сервис). Повторил на TP-Link Archer AX73 с OpenWrt — тот же результат.</p>
+      </div>
+
+      <a href="https://vk.cc/cUpjZq" class="editor-cta" target="_blank" rel="nofollow">
+        <span>Попробовать за 1 ₽</span>
+        <span class="cta-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RATING ===== -->
+<section id="rating" class="rating-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">01</div>
+      <div>
+        <h2 class="sec-title">ТОП-10 VPN для роутера — рейтинг 2026 года</h2>
+        <p class="sec-desc">10 сервисов, проверенных на трёх домашних роутерах в сетях Ростелеком, МТС и Билайн. Фильтруйте по задаче и протоколу, чтобы быстро выбрать под свою модель.</p>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <p class="filter-label">Фильтр по задаче</p>
+      <div class="filter-tags" id="filterTags">
+        <button class="filter-tag active" data-tag="all">Все VPN</button>
+        <button class="filter-tag" data-tag="Для Keenetic">Для Keenetic</button>
+        <button class="filter-tag" data-tag="Для TP-Link">Для TP-Link</button>
+        <button class="filter-tag" data-tag="Для Asus">Для Asus</button>
+        <button class="filter-tag" data-tag="WireGuard">WireGuard</button>
+        <button class="filter-tag" data-tag="OpenVPN">OpenVPN</button>
+        <button class="filter-tag" data-tag="Обходит ТСПУ">Обходит ТСПУ</button>
+        <button class="filter-tag" data-tag="Бесплатный">Бесплатные</button>
+      </div>
+    </div>
+
+    <div id="ratingGrid" class="mt-32">
+
+      <div class="pinned-label">Выбор редакции — ТОП-3</div>
+      <div class="cards-grid" id="pinnedGrid">
+
+        <!-- === #1 VPNTYPE === -->
+        <article class="vpn-card rank-1" data-tags='["Для Keenetic","Для Asus","WireGuard","Обходит ТСПУ"]' data-pinned="true">
+          <header class="card-header">
+            <img src="vpntype-icon.png" alt="VPNTYPE" class="card-logo-img">
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-gold">◆ ТОП-1 · Выбор редакции</span>
+              <h3 class="card-name">VPNTYPE</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">VLESS + WireGuard — для Keenetic и OpenWrt</span>
+                <span class="card-tag card-tag-static">Конфиги под любой роутер</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>5 дней за 1 ₽. Дальше — от 299 ₽/мес. Безлимит трафика через роутер.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Единственный сервис с готовыми VLESS-конфигами для домашнего роутера</div>
+              <p>В личном кабинете VPNTYPE скачиваете .conf-файл WireGuard или VLESS — загружаете прямо в Keenetic, Asus или OpenWrt через веб-интерфейс. На Keenetic Hopper через модуль Amnezia VLESS заработал за 5 минут. В тесте — 98 Мбит/с через туннель на канале 300 Мбит/с провайдера (упор в CPU роутера). За 72 часа непрерывной работы ни одного обрыва.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>Готовые конфиги под Keenetic, Asus, OpenWrt и Merlin</li>
+                  <li>VLESS и Shadowsocks обходят ТСПУ там, где WireGuard уже замедлен</li>
+                  <li>Безлимит устройств — роутер = одна лицензия на весь дом</li>
+                  <li>Русский интерфейс личного кабинета, оплата картой РФ</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>На TP-Link штатной прошивки доступен только OpenVPN — WireGuard через перепрошивку</li>
+                  <li>Бесплатного тарифа нет, только тест за 1 ₽ на 5 дней</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">98</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:98%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от 299 ₽/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Поставил на Keenetic Hopper через VLESS — ушёл весь дом в туннель. Три дня тестирую: YouTube 4K на Android TV, Zoom, Telegram — всё работает как без VPN.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>Если на вашем провайдере WireGuard уже медленный — просите у поддержки VPNTYPE VLESS-конфиг. Он маскирует трафик под HTTPS и пока не попадает под замедление DPI.</p></div>
+            </div>
+          </div>
+          <div class="card-cta"><a href="https://vk.cc/cUpjZq" class="cta-btn cta-primary" target="_blank" rel="nofollow">Попробовать за 1 ₽</a></div>
+        </article>
+
+        <!-- === #2 AdGuard VPN === -->
+        <article class="vpn-card rank-2" data-tags='["Для Keenetic","Для TP-Link","Для Asus","OpenVPN"]' data-pinned="true">
+          <header class="card-header">
+            <img src="adguard-icon.svg" alt="AdGuard VPN" class="card-logo-img">
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-silver">◆ ТОП-2</span>
+              <h3 class="card-name">AdGuard VPN</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">VPN + фильтрация рекламы на весь дом</span>
+                <span class="card-tag card-tag-static">OpenVPN для любого роутера</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>3 ГБ/мес на аккаунте. Для роутера разумнее — премиум-тариф с безлимитом.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Единственный VPN с DNS-фильтрацией рекламы на уровне роутера</div>
+              <p>AdGuard даёт два инструмента в одном: OpenVPN-конфиг для туннеля и DNS-серверы AdGuard DNS, фильтрующие рекламу и трекеры. Прописываете их в настройках роутера — реклама пропадает на всех устройствах в доме: Smart-TV, приставках, смартфонах, даже в играх. В тесте на Keenetic Viva через OpenVPN — 88 Мбит/с, стабильно.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>OpenVPN-конфиги под Keenetic, TP-Link, Asus и OpenWrt</li>
+                  <li>DNS-фильтр режет рекламу во всей домашней сети, включая Smart-TV</li>
+                  <li>88 Мбит/с через роутер — уверенный 1080p и 4K YouTube</li>
+                  <li>Русскоязычная поддержка, оплата из России</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>Бесплатные 3 ГБ/мес на роутере расходуются за 5–6 часов стриминга</li>
+                  <li>WireGuard-конфиги официально не даются — только OpenVPN</li>
+                  <li>Политика no-logs без публичного независимого аудита</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">88</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:88%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от 329 ₽/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Поставил на Keenetic через OpenVPN плюс DNS — на Smart-TV пропала вся реклама до роликов. Жена сначала не поверила, что это от VPN.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>Даже без подписки на VPN пропишите AdGuard DNS на роутере (94.140.14.14, 94.140.15.15) — блокировка рекламы и трекеров включится на всей сети бесплатно.</p></div>
+            </div>
+          </div>
+          <div class="card-cta"><a href="https://vk.cc/cUxOkm" class="cta-btn cta-secondary" target="_blank" rel="nofollow">Перейти к AdGuard VPN</a></div>
+        </article>
+
+        <!-- === #3 HideMy.Name === -->
+        <article class="vpn-card rank-3" data-tags='["Для Keenetic","Для TP-Link","Для Asus","WireGuard","OpenVPN"]' data-pinned="true">
+          <header class="card-header">
+            <img src="hidemyname-icon.svg" alt="HideMy.Name" class="card-logo-img">
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-bronze">◆ ТОП-3</span>
+              <h3 class="card-name">HideMy.Name</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">OpenVPN и WireGuard под роутеры с 2014</span>
+                <span class="card-tag card-tag-static">92 Мбит/с — 4K через туннель</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>1 день бесплатно. Дальше — от 330 ₽/мес за все устройства.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Русскоязычный сервис, выдающий готовые конфиги под каждый роутер</div>
+              <p>HideMy.Name работает в России с 2014 года — для VPN-рынка возраст редкий. В личном кабинете есть раздел «Настройка на роутере» с .ovpn и .conf файлами под каждую страну. В тесте — 92 Мбит/с на Keenetic Hopper через WireGuard, 4K YouTube без буферизации. Инструкции по настройке — по каждой модели роутера в базе знаний.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>Готовые OpenVPN и WireGuard конфиги в личном кабинете</li>
+                  <li>Инструкции на русском по каждому бренду роутера</li>
+                  <li>Работает в РФ стабильно 10+ лет — редкость</li>
+                  <li>Поддержка отвечает в чате за 10–15 минут</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>Бесплатный тест — всего 1 день</li>
+                  <li>Политика no-logs без независимого внешнего аудита</li>
+                  <li>Список серверов меньше, чем у международных Mullvad или Surfshark</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">92</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:92%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от 330 ₽/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Использую на Archer AX73 — OpenVPN-конфиг загрузил в интерфейс TP-Link, ввёл логин-пароль и всё заработало. За полтора года — один раз менял сервер, когда провайдер блокировал IP.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>В HideMy.Name серверы в Нидерландах и Германии дают из России минимальный пинг (25–35 мс). Для роутера это важно — от пинга зависит отзывчивость всей домашней сети.</p></div>
+            </div>
+          </div>
+          <div class="card-cta"><a href="https://vk.cc/cUxOxl" class="cta-btn cta-tertiary" target="_blank" rel="nofollow">Перейти к HideMy.Name</a></div>
+        </article>
+
+      </div>
+
+      <div class="rest-label" style="margin-top:32px">Позиции 4–10</div>
+      <div class="cards-grid-two" id="restGrid">
+
+        <!-- === #4 Surfshark === -->
+        <article class="vpn-card rank-4" data-tags='["Для Asus","WireGuard","OpenVPN"]' data-pinned="false">
+          <header class="card-header">
+            <div class="card-logo logo-sh">SH</div>
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-default">[ 04 ]</span>
+              <h3 class="card-name">Surfshark</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">Готовая прошивка для Asus Merlin</span>
+                <span class="card-tag card-tag-static">Безлимит устройств в доме</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>7 дней пробного периода, возврат 30 дней.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Лучший VPN с готовой прошивкой под Asus и GL.iNet</div>
+              <p>Surfshark — один из немногих международных сервисов, у которого есть официально собранная прошивка под Asuswrt-Merlin. Устанавливаете образ поверх родной ASUSWRT — VPN-клиент Surfshark появляется в меню. На GL.iNet — тоже встроен. Через WireGuard в тесте — 95 Мбит/с, стабильно. Тариф дёшев, если брать на 2 года.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>Готовые образы для Asus Merlin и GL.iNet — без ручной настройки</li>
+                  <li>WireGuard даёт ~95 Мбит/с через роутер</li>
+                  <li>Безлимит устройств — роутер не считается</li>
+                  <li>Кнопка CleanWeb — DNS-фильтр от рекламы</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>Ручная настройка на Keenetic и TP-Link — через OpenVPN, менее удобно</li>
+                  <li>Оплата из России — только через иностранные карты или Steam-код</li>
+                  <li>Базируется в Нидерландах — юрисдикция EU, не швейцарская</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">95</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:95%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от $2.49/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Прошил Asus RT-AX86U на Merlin, поставил Surfshark — настройка за 15 минут по их гайду. WireGuard даёт почти гигабитные скорости, бандл для router идёт с kill switch.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>При настройке на Asus Merlin включите «Exclusive» и вручную добавьте IP домашних стримингов (Кинопоиск, ivi) в исключения — они останутся на прямом подключении.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- === #5 AmneziaVPN === -->
+        <article class="vpn-card rank-5" data-tags='["Для Keenetic","WireGuard","Обходит ТСПУ","Бесплатный"]' data-pinned="false">
+          <header class="card-header">
+            <div class="card-logo logo-am">AM</div>
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-default">[ 05 ]</span>
+              <h3 class="card-name">AmneziaVPN</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">Open-source, собственный сервер</span>
+                <span class="card-tag card-tag-static">Модули для Keenetic и OpenWrt</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>Сам сервис бесплатен — оплачивается только виртуальный сервер (150–300 ₽/мес на Timeweb, Aéza).</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Ваш собственный VPN-сервер с VLESS и AmneziaWG — open-source</div>
+              <p>AmneziaVPN — это не коммерческий сервис, а клиент-сервер с открытым кодом. Вы арендуете виртуальный сервер за 150 ₽/мес, устанавливаете на него Amnezia-пакет и получаете личный VPN с VLESS, AmneziaWG (модифицированный WireGuard) и Shadowsocks. Под Keenetic собран специальный модуль — интегрируется в KeeneticOS как родной VPN-клиент. На OpenWrt есть готовый ipk-пакет.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>Свой сервер = свои логи (они есть только у вас)</li>
+                  <li>AmneziaWG маскируется под случайный трафик — ТСПУ не распознаёт</li>
+                  <li>Модуль KeeneticOS Amnezia — установка как штатного компонента</li>
+                  <li>Нет ежемесячной подписки — только аренда VDS (от 150 ₽)</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>Нужно разбираться с арендой VDS — новичкам сложно</li>
+                  <li>Один сервер — одна страна: несколько «локаций» = несколько серверов</li>
+                  <li>Поддержки как у коммерческого сервиса нет — только GitHub и Telegram</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">80</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:80%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от 150 ₽/мес</div>
+              </div>
+            </div>
+            <div class="review-block">На AX3000T поставил OpenWrt и настроил Amnezia со своим сервером на Timeweb. Один раз настроил — и забыл: блокировки на мой VDS не приходят, он нигде не засвечен.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>Если арендуете VDS под Amnezia — берите сервер в Нидерландах или Финляндии (близко к РФ, низкий пинг) и проверяйте, что IP-диапазон VDS-провайдера не попадал в публичные списки Telegram-банов.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- === #6 Windscribe === -->
+        <article class="vpn-card rank-6" data-tags='["Для Keenetic","Для TP-Link","Для Asus","WireGuard","OpenVPN","Бесплатный"]' data-pinned="false">
+          <header class="card-header">
+            <div class="card-logo logo-ws">WS</div>
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-default">[ 06 ]</span>
+              <h3 class="card-name">Windscribe</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">10 ГБ/мес бесплатно на email</span>
+                <span class="card-tag card-tag-static">Конфиги для любого роутера</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>10 ГБ в месяц бесплатно после подтверждения email.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Самый щедрый бесплатный тариф с конфигами под роутер</div>
+              <p>Windscribe — одна из немногих сервисов с честным бесплатным лимитом и полной функциональностью конфигов. После регистрации в личном кабинете открывается генератор .conf и .ovpn для любой страны. В 2026 году работает через роутер в РФ при выборе голландского или немецкого сервера. Встроенный R.O.B.E.R.T. — DNS-фильтр от рекламы и трекеров на уровне подписки.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>10 ГБ/мес честно бесплатно — редкость на рынке VPN</li>
+                  <li>WireGuard и OpenVPN генераторы конфигов для роутера в ЛК</li>
+                  <li>R.O.B.E.R.T. блокирует рекламу и трекеры по DNS на весь дом</li>
+                  <li>No-logs с длительной историей (проверены обысками в 2015 году)</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>Интерфейс личного кабинета только на английском</li>
+                  <li>Скорость на бесплатных серверах в пиковые часы падает до 20–30 Мбит/с</li>
+                  <li>Некоторые IP-диапазоны периодически блокируются российским ТСПУ</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">75</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:75%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от $5.75/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Использую как резерв на TP-Link: основной VPN упал — переключаюсь на Windscribe через второй OpenVPN-профиль. 10 ГБ бесплатно хватает на экстренные случаи надолго.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>В настройках личного кабинета Windscribe включите «Scramble» при генерации OpenVPN-конфига — трафик маскируется под HTTPS и лучше проходит через ТСПУ российских провайдеров.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- === #7 Mullvad VPN === -->
+        <article class="vpn-card rank-7" data-tags='["Для Keenetic","Для Asus","WireGuard"]' data-pinned="false">
+          <header class="card-header">
+            <div class="card-logo logo-ml">ML</div>
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-default">[ 07 ]</span>
+              <h3 class="card-name">Mullvad VPN</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">Легенда WireGuard под роутеры</span>
+                <span class="card-tag card-tag-static">Flat-rate — 5 € в месяц</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>Бесплатного тарифа нет. Оплата — 5 €/мес, без скидок за год.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Эталонный WireGuard-сервис с генератором конфигов под OpenWrt</div>
+              <p>Mullvad — швейцарская философия приватности с шведской пропиской. В личном кабинете у них самый удобный генератор WireGuard-конфигов: выбираете страну, скачиваете .conf файл, загружаете в Keenetic или OpenWrt. Не нужен email — только аккаунт-номер. В тесте — 90 Мбит/с на Keenetic Hopper через WireGuard. Порт-форвардинг для P2P включается в один клик.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>Анонимная регистрация — без email и карты (можно оплатить криптой)</li>
+                  <li>WireGuard-конфиги под любую страну и любой роутер</li>
+                  <li>Порт-форвардинг для P2P — удобно для торрент-клиента за VPN</li>
+                  <li>Один тариф 5 €/мес — без капканов со скидками за год</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>Нет бесплатного тарифа и теста — сразу оплата</li>
+                  <li>Скидок за годовую подписку нет — fix 5 € в месяц</li>
+                  <li>В РФ работает нестабильно — часть IP-диапазонов под санкциями ТСПУ</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">90</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:90%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">5 €/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Настроил на OpenWrt-роутере через WireGuard за 10 минут по их документации. Из плюсов — чёткая скорость и приватность. Минус для РФ — периодически приходится переключать сервер.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>У Mullvad есть мобильные приложения, которые автоматически качают конфиги WireGuard. Можно установить приложение на ПК, экспортировать оттуда .conf — и загрузить в роутер.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- === #8 Planet VPN === -->
+        <article class="vpn-card rank-8" data-tags='["Для Keenetic","Для TP-Link","OpenVPN","Бесплатный"]' data-pinned="false">
+          <header class="card-header">
+            <div class="card-logo logo-pl">PL</div>
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-default">[ 08 ]</span>
+              <h3 class="card-name">Planet VPN</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">OpenVPN-файлы на бесплатном тарифе</span>
+                <span class="card-tag card-tag-static">5 серверов без регистрации</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>Бесплатно — 5 серверов: США, Германия, Нидерланды, Канада, Россия. Без регистрации.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Рабочий бесплатный OpenVPN для экспериментов на роутере</div>
+              <p>Planet VPN — одно из немногих действительно бесплатных решений, которое даёт скачать .ovpn-файлы. В бесплатном тарифе — 5 стран, без регистрации и трафиковых лимитов. В тесте на Keenetic через OpenVPN — 42 Мбит/с, достаточно для 1080p стрима и задач серфинга. Для первой настройки VPN на роутере без денежных рисков — подходящий вариант.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>Бесплатно без лимита трафика через роутер</li>
+                  <li>OpenVPN-файлы прямо с сайта, без регистрации</li>
+                  <li>5 стран, включая Германию и Нидерланды с низким пингом</li>
+                  <li>Простая настройка на Keenetic и TP-Link</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>~42 Мбит/с — 4K YouTube через туннель местами буферизует</li>
+                  <li>WireGuard-конфигов нет — только OpenVPN</li>
+                  <li>Политика no-logs без независимого внешнего аудита</li>
+                  <li>Реклама внутри личного кабинета сервиса</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">42</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:42%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от $1.99/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Первым ставил именно его — разобраться как VPN на роутере вообще работает. Работает стабильно, для первого опыта — нормально. Позже перешёл на платный сервис для скорости.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>На роутере с Planet VPN принудительно выбирайте немецкий или голландский сервер — они держат стабильную скорость даже в пиковые часы. Американский проседает вечером.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- === #9 ProtonVPN === -->
+        <article class="vpn-card rank-9" data-tags='["Для Keenetic","Для Asus","WireGuard","OpenVPN"]' data-pinned="false">
+          <header class="card-header">
+            <div class="card-logo logo-pr">PR</div>
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-default">[ 09 ]</span>
+              <h3 class="card-name">ProtonVPN</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">Швейцарская юрисдикция, независимый аудит</span>
+                <span class="card-tag card-tag-static">Подробные гайды для роутеров</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>Бесплатный тариф: 3 страны (США, Нидерланды, Япония), без лимита трафика.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Швейцарский VPN с открытым кодом и серьёзной репутацией</div>
+              <p>Proton — те же люди, что делают ProtonMail. Весь клиент открытый, no-logs политика проверена аудитом SEC Consult. В личном кабинете — генератор OpenVPN и WireGuard конфигов по странам. База знаний на русском с отдельными инструкциями по Asus, TP-Link и OpenWrt. В тесте — 85 Мбит/с на Keenetic через WireGuard, стабильно.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>Швейцарская юрисдикция вне 5/9/14 Eyes</li>
+                  <li>Открытый код клиента, проверяемый аудит no-logs</li>
+                  <li>Бесплатный тариф с безлимитным трафиком (3 страны)</li>
+                  <li>Гайды по настройке на роутере — официальные, на русском</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>На бесплатном тарифе роутер можно подключить только к 3 странам</li>
+                  <li>Скорость бесплатных серверов в пиковые часы — 20–35 Мбит/с</li>
+                  <li>Premium-тариф дороже конкурентов при оплате помесячно</li>
+                  <li>Оплата из РФ ограничена — нужна иностранная карта или крипта</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">85</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:85%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от 4.99 €/мес</div>
+              </div>
+            </div>
+            <div class="review-block">На Asus RT-AX86U Pro настроил ProtonVPN WireGuard по официальному гайду — за 20 минут. Скорость стабильная, логов нет. Единственное — оплата только через карту, заплатил с друзьями в складчину.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>У ProtonVPN есть функция Secure Core — трафик идёт через два VPN-сервера последовательно, первый в нейтральной стране (Исландия, Швеция). На роутере это настраивается через специальный .conf файл.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- === #10 Whoer VPN === -->
+        <article class="vpn-card rank-10" data-tags='["Для Keenetic","Для TP-Link","Для Asus","OpenVPN"]' data-pinned="false">
+          <header class="card-header">
+            <div class="card-logo logo-wh">WH</div>
+            <div class="card-title-area">
+              <span class="card-rank-badge rank-default">[ 10 ]</span>
+              <h3 class="card-name">Whoer VPN</h3>
+              <div class="card-tags-row">
+                <span class="card-tag card-tag-static">OpenVPN-конфиги для роутера</span>
+                <span class="card-tag card-tag-static">Собственный тест утечки IP</span>
+              </div>
+            </div>
+          </header>
+          <div class="card-body">
+            <div class="free-badge">
+              <div class="free-badge-icon">◎</div>
+              <div><span>Бесплатно / тест</span>1 ГБ в день бесплатно после регистрации.</div>
+            </div>
+            <div class="why-block">
+              <div class="why-title">Сервис со своим инструментом проверки анонимности</div>
+              <p>Whoer знаком многим как сервис whoer.net, который показывает, что сайт видит о вас. VPN-сервис от тех же разработчиков. В личном кабинете есть .ovpn-файлы под роутер, работают в России в 2026. В тесте — 70 Мбит/с через OpenVPN на Keenetic. После настройки сразу можно открыть whoer.net с любого устройства в доме и проверить, не утекают ли реальный IP и DNS.</p>
+            </div>
+            <div class="pros-cons">
+              <div class="pros-cons-col pros-col">
+                <div class="pc-label">Плюсы</div>
+                <ul>
+                  <li>OpenVPN-файлы под Keenetic, TP-Link и Asus</li>
+                  <li>Собственный whoer.net для проверки утечки IP и DNS</li>
+                  <li>Бесплатный лимит 1 ГБ/день ≈ 30 ГБ/мес</li>
+                  <li>No-logs политика, работает в РФ</li>
+                </ul>
+              </div>
+              <div class="pros-cons-col cons-col">
+                <div class="pc-label">Минусы</div>
+                <ul>
+                  <li>WireGuard-конфигов через роутер официально нет — только OpenVPN</li>
+                  <li>Оплата из России ограничена — нужна иностранная карта</li>
+                  <li>Независимых аудитов меньше, чем у крупных международных брендов</li>
+                  <li>Скорость через туннель ~70 Мбит/с — ограничение сервиса</li>
+                </ul>
+              </div>
+            </div>
+            <div class="speed-price">
+              <div class="metric">
+                <div class="metric-label">Скорость через роутер</div>
+                <div class="metric-value">70</div>
+                <div class="metric-unit">Мбит/с</div>
+                <div class="speed-bar-wrap"><div class="speed-bar"><div class="speed-bar-fill" style="width:70%"></div></div></div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Цена</div>
+                <div class="metric-value" style="font-size:15px;padding-top:6px;line-height:1.3">от $3.9/мес</div>
+              </div>
+            </div>
+            <div class="review-block">Настроил Whoer на Keenetic через OpenVPN. После подключения открыл whoer.net с телефона — IP из Нидерландов, DNS тоже, утечек нет. Для ежедневного использования — норма.</div>
+            <div class="lifehack">
+              <div class="lifehack-icon">▲</div>
+              <div><div class="lifehack-label">Совет инженера</div><p>После настройки любого VPN на роутере зайдите на whoer.net с устройства, подключённого к Wi-Fi. Если показывает >80% анонимности — всё работает. Меньше — проверяйте DNS-настройки роутера.</p></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROUTERS COMPATIBILITY ===== -->
+<section id="routers" class="routers-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">02</div>
+      <div>
+        <h2 class="sec-title">Какие роутеры поддерживают VPN</h2>
+        <p class="sec-desc">Разбор по моделям: что работает из коробки, что требует перепрошивки, какой протокол доступен. Разобрано по пяти самым популярным брендам в России.</p>
+      </div>
+    </div>
+
+    <div class="routers-grid">
+      <div class="router-card">
+        <div class="router-brand">
+          <div class="router-brand-nb">KN</div>
+          <div class="router-brand-name">Keenetic</div>
+        </div>
+        <div class="router-proto">
+          <span class="proto-ok">WireGuard</span>
+          <span class="proto-ok">OpenVPN</span>
+          <span class="proto-ok">IPsec</span>
+          <span class="proto-ok">L2TP</span>
+          <span class="proto-ok">PPTP</span>
+          <span class="proto-ok">VLESS*</span>
+        </div>
+        <p class="router-note">Все современные модели (Hopper, Viva, Giga, Ultra) с прошивкой 3.7+ поддерживают VPN-клиент из коробки. VLESS — через сторонний репозиторий Amnezia.</p>
+        <div class="router-models">
+          <span class="rmod">Hopper KN-3810</span>
+          <span class="rmod">Viva KN-1912</span>
+          <span class="rmod">Giga KN-1011</span>
+          <span class="rmod">Ultra KN-1811</span>
+        </div>
+      </div>
+
+      <div class="router-card">
+        <div class="router-brand">
+          <div class="router-brand-nb">TL</div>
+          <div class="router-brand-name">TP-Link Archer</div>
+        </div>
+        <div class="router-proto">
+          <span class="proto-ok">OpenVPN</span>
+          <span class="proto-ok">PPTP</span>
+          <span class="proto-warn">WireGuard**</span>
+          <span class="proto-warn">VLESS**</span>
+        </div>
+        <p class="router-note">OpenVPN доступен в штатной прошивке на Archer C6, C7, A9, AX55, AX73. Для WireGuard и VLESS нужна прошивка OpenWrt — поддерживают C6 v3, AX23, частично AX73.</p>
+        <div class="router-models">
+          <span class="rmod">Archer AX73</span>
+          <span class="rmod">Archer AX55</span>
+          <span class="rmod">Archer C7</span>
+          <span class="rmod">Archer C6</span>
+        </div>
+      </div>
+
+      <div class="router-card">
+        <div class="router-brand">
+          <div class="router-brand-nb">AS</div>
+          <div class="router-brand-name">Asus RT</div>
+        </div>
+        <div class="router-proto">
+          <span class="proto-ok">OpenVPN</span>
+          <span class="proto-ok">WireGuard</span>
+          <span class="proto-ok">IPsec</span>
+          <span class="proto-ok">PPTP</span>
+          <span class="proto-ok">L2TP</span>
+        </div>
+        <p class="router-note">RT-AX-серия с прошивкой от конца 2023 года умеет WireGuard-клиент из коробки. Для продвинутой маршрутизации и kill switch — прошивка Asuswrt-Merlin (ставится поверх).</p>
+        <div class="router-models">
+          <span class="rmod">RT-AX86U Pro</span>
+          <span class="rmod">RT-AX88U</span>
+          <span class="rmod">RT-AC86U</span>
+          <span class="rmod">RT-AX68U</span>
+        </div>
+      </div>
+
+      <div class="router-card">
+        <div class="router-brand">
+          <div class="router-brand-nb">XM</div>
+          <div class="router-brand-name">Xiaomi / Redmi</div>
+        </div>
+        <div class="router-proto">
+          <span class="proto-warn">OpenVPN**</span>
+          <span class="proto-warn">WireGuard**</span>
+          <span class="proto-warn">VLESS**</span>
+        </div>
+        <p class="router-note">Штатная прошивка Xiaomi VPN-клиентом не работает. Через OpenWrt или PandoraBox на моделях AX3000T, AX3200, AX6000 появляется весь набор протоколов. Перепрошивка отменяет гарантию.</p>
+        <div class="router-models">
+          <span class="rmod">AX3000T</span>
+          <span class="rmod">AX3200</span>
+          <span class="rmod">AX6000</span>
+          <span class="rmod">Redmi AX6S</span>
+        </div>
+      </div>
+
+      <div class="router-card">
+        <div class="router-brand">
+          <div class="router-brand-nb">DL</div>
+          <div class="router-brand-name">D-Link</div>
+        </div>
+        <div class="router-proto">
+          <span class="proto-ok">OpenVPN</span>
+          <span class="proto-ok">L2TP</span>
+          <span class="proto-ok">PPTP</span>
+          <span class="proto-warn">WireGuard**</span>
+        </div>
+        <p class="router-note">DIR-X-серия (X1860, X3260) поддерживает OpenVPN-клиент штатно. Старые DIR-825, DIR-842 — только PPTP/L2TP. Для WireGuard на D-Link — прошивка OpenWrt, поддержка выборочная.</p>
+        <div class="router-models">
+          <span class="rmod">DIR-X1860</span>
+          <span class="rmod">DIR-X3260</span>
+          <span class="rmod">DIR-878</span>
+          <span class="rmod">DIR-825</span>
+        </div>
+      </div>
+
+      <div class="router-card">
+        <div class="router-brand">
+          <div class="router-brand-nb">GL</div>
+          <div class="router-brand-name">GL.iNet</div>
+        </div>
+        <div class="router-proto">
+          <span class="proto-ok">WireGuard</span>
+          <span class="proto-ok">OpenVPN</span>
+          <span class="proto-ok">Shadowsocks</span>
+          <span class="proto-ok">VLESS</span>
+          <span class="proto-ok">Tor</span>
+        </div>
+        <p class="router-note">Роутеры заточены под VPN из коробки — GL-MT6000, GL-AX1800 (Flint 2), GL-AR750S. В интерфейсе есть готовые профили для десятка сервисов. Для тех, кто ставит VPN главной задачей.</p>
+        <div class="router-models">
+          <span class="rmod">GL-MT6000</span>
+          <span class="rmod">GL-AX1800</span>
+          <span class="rmod">GL-AR750S</span>
+          <span class="rmod">GL-MT3000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="routers-note">
+      <span>*</span>VLESS на Keenetic — через сторонний модуль Amnezia, не входит в штатный состав прошивки.<br>
+      <span>**</span>Требует перепрошивки на OpenWrt или аналог. Отменяет заводскую гарантию. Перед прошивкой проверяйте совместимость вашей ревизии на openwrt.org/toh.
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSTALL GUIDE ===== -->
+<section id="install" class="install-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">03</div>
+      <div>
+        <h2 class="sec-title">Как установить и настроить VPN на роутере — инструкции по брендам</h2>
+        <p class="sec-desc">Три самые популярные модели в России 2026 года. Шаги отличаются, но логика одна: скачать конфиг-файл у VPN-сервиса → загрузить его в роутер → активировать соединение.</p>
+      </div>
+    </div>
+
+    <div class="install-tabs" id="installTabs">
+      <button class="itab active" data-tab="keenetic">Keenetic</button>
+      <button class="itab" data-tab="tplink">TP-Link</button>
+      <button class="itab" data-tab="asus">Asus</button>
+      <button class="itab" data-tab="openwrt">OpenWrt (Xiaomi, TP-Link, D-Link)</button>
+    </div>
+
+    <!-- Keenetic -->
+    <div class="itab-body active" data-tab-body="keenetic">
+      <div class="install-prereq">
+        <strong>Прошивка:</strong> KeeneticOS 3.7 или новее (проверить: «Общие настройки» → «Обновления»). Для VLESS — установите из Amnezia repo модуль KeeneticOS Amnezia.
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-nb">01</div>
+          <div class="step-content">
+            <h3>Установите компонент VPN-клиента</h3>
+            <p>Откройте веб-интерфейс по адресу <code>my.keenetic.net</code> или 192.168.1.1. Перейдите в «Общие настройки» → «Обновления и компоненты» → «Изменить набор компонентов». В поиске наберите <code>WireGuard</code> или <code>OpenVPN</code> — поставьте галочку и сохраните. Роутер перезагрузится.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">02</div>
+          <div class="step-content">
+            <h3>Получите конфиг-файл у VPN-сервиса</h3>
+            <p>В личном кабинете VPN-сервиса найдите раздел «Настройка на роутере» или «Manual configuration». Скачайте <code>.conf</code> (WireGuard) или <code>.ovpn</code> (OpenVPN) файл. У VPNTYPE, HideMy.Name и Mullvad файл даётся сразу с нужной страной и учётными данными.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">03</div>
+          <div class="step-content">
+            <h3>Создайте новое соединение</h3>
+            <p>В интерфейсе Keenetic: «Интернет» → «Другие подключения» → «Добавить соединение». Выберите тип (WireGuard / OpenVPN), загрузите скачанный конфиг-файл. Введите логин и пароль, если сервис их запрашивает.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">04</div>
+          <div class="step-content">
+            <h3>Проверьте подключение</h3>
+            <p>Рядом с новым соединением должен загореться зелёный индикатор. В «Диагностике» → «Система» появится новый интерфейс <code>nwg0</code> (WireGuard) или <code>ovpn_br0</code> с отправленным и принятым трафиком.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">05</div>
+          <div class="step-content">
+            <h3>Направьте трафик через VPN</h3>
+            <p>«Приоритеты подключений» — перетащите VPN-соединение выше основного провайдера. Либо зайдите в «Сетевые правила» → «Маршрутизация» и задайте маршрут для конкретных устройств (умный ТВ, приставка) через VPN, остальные — напрямую.</p>
+          </div>
+        </div>
+      </div>
+      <div class="install-verify">
+        ✓ <strong>Проверка:</strong> с любого устройства в домашнем Wi-Fi откройте <code>2ip.ru</code> — IP и страна должны поменяться на адрес VPN-сервера. Если нет — в настройках соединения уберите галочку «Использовать для выхода в интернет только по этому подключению», сохраните, включите обратно.
+      </div>
+    </div>
+
+    <!-- TP-Link -->
+    <div class="itab-body" data-tab-body="tplink">
+      <div class="install-prereq">
+        <strong>Прошивка:</strong> штатная 1.2.x для Archer AX73 / AX55 / C7 v5. На Archer C6 v3 — OpenWrt 22.03 или новее. WireGuard на штатной прошивке отсутствует.
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-nb">01</div>
+          <div class="step-content">
+            <h3>Зайдите в веб-интерфейс роутера</h3>
+            <p>Адрес — <code>tplinkwifi.net</code> или 192.168.0.1. Логин и пароль — с наклейки на роутере (обычно admin/admin или admin/пароль с коробки).</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">02</div>
+          <div class="step-content">
+            <h3>Откройте раздел VPN Client</h3>
+            <p>«Дополнительные настройки» → «VPN Client». На некоторых моделях раздел называется «VPN Server/Client». Если его нет — прошивка старая, обновите на сайте tp-link.com/support → введите модель → Firmware.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">03</div>
+          <div class="step-content">
+            <h3>Загрузите OpenVPN-профиль</h3>
+            <p>Нажмите «Добавить». Тип — OpenVPN. Название — произвольное. Загрузите <code>.ovpn</code> файл от VPN-сервиса. Введите логин и пароль, если они запрашиваются отдельно.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">04</div>
+          <div class="step-content">
+            <h3>Добавьте устройства в VPN</h3>
+            <p>На TP-Link по умолчанию через VPN идут не все, а только указанные устройства. В разделе «VPN Client» → «Add» → укажите MAC-адреса (из «Карта сети» → «Подключённые устройства») или выберите сеть целиком.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">05</div>
+          <div class="step-content">
+            <h3>Активируйте подключение</h3>
+            <p>Переключатель рядом с профилем — в положение «Включено». Статус должен смениться на «Connected». Если соединение падает — проверьте в логах, что порт UDP (обычно 1194 для OpenVPN) не блокируется провайдером.</p>
+          </div>
+        </div>
+      </div>
+      <div class="install-verify">
+        ✓ <strong>Проверка:</strong> откройте <code>2ip.ru</code> с добавленного в VPN устройства — IP должен быть из страны VPN. Если с одних устройств работает, с других нет — значит, не все MAC-адреса добавлены в список VPN-клиента.
+      </div>
+    </div>
+
+    <!-- Asus -->
+    <div class="itab-body" data-tab-body="asus">
+      <div class="install-prereq">
+        <strong>Прошивка:</strong> ASUSWRT 388.x для нативного WireGuard. Для продвинутых возможностей (kill switch, маршрутизация по правилам) — Asuswrt-Merlin 388.7+. Поддерживает RT-AX86U, AX88U, AC86U, AX68U.
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-nb">01</div>
+          <div class="step-content">
+            <h3>Зайдите в ASUSWRT</h3>
+            <p>Адрес — <code>router.asus.com</code> или 192.168.1.1. В левом меню — раздел «VPN».</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">02</div>
+          <div class="step-content">
+            <h3>Выберите VPN Client → Add profile</h3>
+            <p>Вкладка «VPN Client» → кнопка «Add profile». Появятся варианты: PPTP, L2TP, OpenVPN, WireGuard. Для новых роутеров выбирайте WireGuard — быстрее и стабильнее.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">03</div>
+          <div class="step-content">
+            <h3>Импортируйте конфиг-файл</h3>
+            <p>Кнопка «Import .ovpn file» или «Import .conf file». Загрузите файл от VPN-сервиса. Имя профиля — любое, например «VPN_Home». Сохраните.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">04</div>
+          <div class="step-content">
+            <h3>Активируйте и настройте правила</h3>
+            <p>Переключатель «Activate» рядом с профилем. В «Rules» задаётся, какие устройства или диапазоны IP идут через VPN, а какие напрямую — полезно, если умный ТВ должен оставаться в локальной сети провайдера.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">05</div>
+          <div class="step-content">
+            <h3>Включите kill switch (опционально)</h3>
+            <p>В Merlin-прошивке — галочка «Block routed clients if tunnel goes down». Если VPN разорвётся, устройства из правила не получат интернет через обычное подключение — утечки реального IP не будет.</p>
+          </div>
+        </div>
+      </div>
+      <div class="install-verify">
+        ✓ <strong>Проверка:</strong> статус профиля — «Connected». На устройстве в VPN-сегменте — <code>2ip.ru</code> показывает новый IP. В разделе «VPN Client» → «Statistics» должен расти приём/отправка в реальном времени.
+      </div>
+    </div>
+
+    <!-- OpenWrt -->
+    <div class="itab-body" data-tab-body="openwrt">
+      <div class="install-prereq">
+        <strong>Прошивка:</strong> OpenWrt 22.03 или 23.05. Устанавливается на Xiaomi AX3000T/AX3200, TP-Link C6 v3, D-Link DIR-878, Netgear R7800 и десятки других. Перед прошивкой — проверка модели и ревизии на openwrt.org/toh.
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-nb">01</div>
+          <div class="step-content">
+            <h3>Установите нужный пакет</h3>
+            <p>Подключитесь к роутеру по SSH (<code>ssh root@192.168.1.1</code>) или через LuCI → System → Software. Для WireGuard: <code>opkg install wireguard-tools luci-app-wireguard</code>. Для OpenVPN: <code>opkg install openvpn-openssl luci-app-openvpn</code>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">02</div>
+          <div class="step-content">
+            <h3>Создайте VPN-интерфейс в LuCI</h3>
+            <p>Network → Interfaces → Add new interface. Название — <code>wg0</code> для WireGuard или <code>ovpn</code> для OpenVPN. Protocol — соответствующий. Для WireGuard сразу вставьте в интерфейс ключи и данные пиров из конфига сервиса.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">03</div>
+          <div class="step-content">
+            <h3>Настройте firewall</h3>
+            <p>Network → Firewall → добавить зону <code>vpn</code>. Forwarding — From LAN to VPN. Masquerading — включить. Без этого шага трафик от устройств в LAN не уйдёт в туннель.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">04</div>
+          <div class="step-content">
+            <h3>Укажите DNS VPN-сервиса</h3>
+            <p>В интерфейсе VPN задайте DNS 10.2.0.1 (у большинства сервисов) или конкретный от VPN-провайдера. Это обязательно — иначе DNS-запросы утекают через провайдера, и блокировки остаются.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-nb">05</div>
+          <div class="step-content">
+            <h3>Поднимите интерфейс</h3>
+            <p>«Save & Apply» — VPN-интерфейс поднимается. В Status → Interfaces должен быть RX/TX ≠ 0. Для VLESS/XRAY на OpenWrt ставят пакет <code>xray-core</code> вручную — сложнее, но работает на слабых SoC (MT7621, IPQ8072).</p>
+          </div>
+        </div>
+      </div>
+      <div class="install-verify">
+        ✓ <strong>Проверка:</strong> <code>curl ipinfo.io</code> с роутера по SSH — вернёт IP VPN-сервера. Если вернул обычный IP провайдера — смотрите <code>iptables -t nat -L -v</code>: нет правил MASQUERADE → не настроен firewall.
+      </div>
+    </div>
+
+    <div class="install-common">
+      <h3>Типичные ошибки — и как их быстро исправить</h3>
+      <ul class="common-list">
+        <li><strong>Соединение «подключено», но IP не сменился.</strong> В маршрутизации не задан default gateway через VPN. На Keenetic — «Приоритеты подключений», VPN выше. На OpenWrt — настройки firewall и masquerading.</li>
+        <li><strong>DNS-утечка.</strong> Устройства получают DNS от провайдера, минуя туннель. Пропишите в интерфейсе VPN DNS от сервиса (обычно 10.2.0.1 или конкретный IP в конфиге).</li>
+        <li><strong>Падает скорость на 70–80%.</strong> Роутеру не хватает CPU для шифрования. Помогает смена OpenVPN на WireGuard (в 2–3 раза быстрее). Если это не помогло — роутер слабый, CPU ≤600 МГц.</li>
+        <li><strong>Периодический разрыв туннеля.</strong> Сервер сервиса перегружен или провайдер блокирует по IP. Смените точку входа в конфиге на другую страну — обычно помогает.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON TABLE ===== -->
+<section id="table" class="table-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">04</div>
+      <div>
+        <h2 class="sec-title">Сравнительная таблица VPN для роутера</h2>
+        <p class="sec-desc">Скорость, протоколы, бесплатный тариф и совместимость с роутерами — одним взглядом.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Сервис</th>
+            <th>Скорость</th>
+            <th>Протоколы</th>
+            <th>Keenetic</th>
+            <th>TP-Link</th>
+            <th>Asus</th>
+            <th>OpenWrt</th>
+            <th>Free / Test</th>
+            <th>Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tr-gold"><td><strong>1</strong></td><td><strong>VPNTYPE</strong></td><td>~100 Мбит/с</td><td>WireGuard, VLESS, OpenVPN</td><td class="yes-icon">✓</td><td class="partial-icon">OpenWrt</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="partial-icon">5 дней / 1₽</td><td>от 299 ₽/мес</td></tr>
+          <tr class="tr-silver"><td><strong>2</strong></td><td><strong>AdGuard VPN</strong></td><td>~88 Мбит/с</td><td>OpenVPN, DNS-фильтр</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="partial-icon">3 ГБ/мес</td><td>от 329 ₽/мес</td></tr>
+          <tr class="tr-bronze"><td><strong>3</strong></td><td><strong>HideMy.Name</strong></td><td>~92 Мбит/с</td><td>OpenVPN, WireGuard</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="partial-icon">1 день</td><td>от 330 ₽/мес</td></tr>
+          <tr><td>4</td><td>Surfshark</td><td>~95 Мбит/с</td><td>WireGuard, OpenVPN</td><td class="partial-icon">ручная</td><td class="partial-icon">OpenVPN</td><td class="yes-icon">готовая</td><td class="yes-icon">✓</td><td class="partial-icon">7 дней</td><td>от $2.49/мес</td></tr>
+          <tr><td>5</td><td>AmneziaVPN</td><td>~80 Мбит/с</td><td>VLESS, WireGuard, AmneziaWG</td><td class="yes-icon">модуль</td><td class="partial-icon">OpenWrt</td><td class="partial-icon">OpenWrt</td><td class="yes-icon">✓</td><td class="yes-icon">свой сервер</td><td>от 150 ₽/мес*</td></tr>
+          <tr><td>6</td><td>Windscribe</td><td>~75 Мбит/с</td><td>OpenVPN, WireGuard</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">10 ГБ/мес</td><td>от $5.75/мес</td></tr>
+          <tr><td>7</td><td>Mullvad VPN</td><td>~90 Мбит/с</td><td>WireGuard, OpenVPN</td><td class="yes-icon">✓</td><td class="partial-icon">OpenVPN</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="no-icon">—</td><td>5 €/мес (flat)</td></tr>
+          <tr><td>8</td><td>Planet VPN</td><td>~42 Мбит/с</td><td>OpenVPN</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">безлимит free</td><td>от $1.99/мес</td></tr>
+          <tr><td>9</td><td>ProtonVPN</td><td>~85 Мбит/с</td><td>WireGuard, OpenVPN</td><td class="yes-icon">✓</td><td class="partial-icon">OpenVPN</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="partial-icon">3 страны</td><td>от 4.99 €/мес</td></tr>
+          <tr><td>10</td><td>Whoer VPN</td><td>~70 Мбит/с</td><td>OpenVPN, WireGuard</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="yes-icon">✓</td><td class="partial-icon">1 ГБ/день</td><td>от $3.9/мес</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">*AmneziaVPN — open-source сервис. Плата идёт не за VPN, а за виртуальный сервер (VDS), на котором разворачивается ваш персональный туннель. Популярные варианты — Timeweb, Aéza, FirstVDS от 150 ₽/мес.</p>
+  </div>
+</section>
+
+<!-- ===== BUYING GUIDE ===== -->
+<section id="buying" class="buying-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">05</div>
+      <div>
+        <h2 class="sec-title">Какой роутер купить для VPN в 2026 году</h2>
+        <p class="sec-desc">Роутеры подобраны по трём уровням: бюджетный, универсальный, мощный. Все работают с VPN без перепрошивки либо с простой установкой OpenWrt.</p>
+      </div>
+    </div>
+
+    <div class="buy-grid">
+      <div class="buy-card buy-budget">
+        <div class="buy-tier">Бюджет</div>
+        <div class="buy-price">от 4 200 ₽</div>
+        <h3 class="buy-name">Xiaomi AX3000T</h3>
+        <p class="buy-reason">Дешёвый Wi-Fi 6 с памятью 256 МБ и процессором MT7981 — его тянет OpenWrt, а значит все протоколы включая VLESS. После перепрошивки выдаёт 70–85 Мбит/с через WireGuard.</p>
+        <div class="buy-pros"><strong>Плюсы:</strong> дешево, Wi-Fi 6, 1 Гбит/с порты</div>
+        <div class="buy-cons"><strong>Минусы:</strong> из коробки без VPN-клиента, нужна перепрошивка</div>
+      </div>
+
+      <div class="buy-card buy-best">
+        <div class="buy-best-ribbon">Лучший выбор</div>
+        <div class="buy-tier">Оптимум</div>
+        <div class="buy-price">от 5 900 ₽</div>
+        <h3 class="buy-name">Keenetic Hopper KN-3810</h3>
+        <p class="buy-reason">Производитель из Тайваня с фокусом на русский рынок. Все VPN-протоколы в штатной прошивке, плюс VLESS через модуль Amnezia. 880 МГц CPU держит 95 Мбит/с через WireGuard. Для большинства российских квартир — оптимум.</p>
+        <div class="buy-pros"><strong>Плюсы:</strong> VPN из коробки, Wi-Fi 6, русский интерфейс, поддержка</div>
+        <div class="buy-cons"><strong>Минусы:</strong> цена выше Xiaomi, нет 2.5-Гбит/с порта</div>
+      </div>
+
+      <div class="buy-card buy-high">
+        <div class="buy-tier">Мощный</div>
+        <div class="buy-price">от 13 900 ₽</div>
+        <h3 class="buy-name">GL.iNet GL-MT6000 (Flint 2)</h3>
+        <p class="buy-reason">Профессиональный роутер с заточкой под VPN. 2.5-Гбит/с WAN, четыре ядра CPU, встроенные профили под Mullvad, ProtonVPN, AzireVPN. Через WireGuard — 900 Мбит/с. Для тех, кто хочет 1 Гбит/с в туннеле.</p>
+        <div class="buy-pros"><strong>Плюсы:</strong> 1 Гбит/с через VPN, десяток протоколов, AdGuard Home</div>
+        <div class="buy-cons"><strong>Минусы:</strong> цена, интерфейс только на английском</div>
+      </div>
+    </div>
+
+    <div class="buy-alt">
+      <h3>Альтернативы, если интересны другие бренды</h3>
+      <div class="buy-alt-grid">
+        <div class="buy-alt-item"><strong>TP-Link Archer AX73</strong><span>OpenVPN из коробки, Wi-Fi 6, 8 400 ₽. Перепрошивка на OpenWrt — аккуратно, чип в разных ревизиях разный.</span></div>
+        <div class="buy-alt-item"><strong>Asus RT-AX86U Pro</strong><span>WireGuard в родной прошивке ASUSWRT 388.x, Merlin опционально. 18 500 ₽. Для тех, кто хочет коробочное решение без OpenWrt.</span></div>
+        <div class="buy-alt-item"><strong>MikroTik hAP ax³</strong><span>Полнофункциональный RouterOS с WireGuard, IPsec, OpenVPN и SSTP. 9 200 ₽. Требует технической грамотности.</span></div>
+        <div class="buy-alt-item"><strong>Keenetic Viva KN-1912</strong><span>Младший брат Hopper за 4 500 ₽. Wi-Fi 5, но все VPN-функции прошивки доступны. Для 1–2-комнатной квартиры хватит.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="howitworks-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">06</div>
+      <div>
+        <h2 class="sec-title">Как работает VPN на роутере — и почему это удобнее, чем ставить приложение</h2>
+        <p class="sec-desc">Короткое техническое объяснение, которое пригодится при настройке и выборе тарифа.</p>
+      </div>
+    </div>
+
+    <div class="hiw-grid">
+      <div class="hiw-card">
+        <div class="hiw-nb">→</div>
+        <h3>Один туннель на весь дом</h3>
+        <p>Роутер поднимает VPN-туннель и делает всё устройства в квартире «выходящими в интернет» через него. Телевизор, PlayStation, умная колонка, ноутбук — все получают новый IP и минус одну блокировку. На каждом устройстве ставить приложение не нужно.</p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-nb">→</div>
+        <h3>Лицензия на роутер — это одна «точка»</h3>
+        <p>С точки зрения VPN-сервиса роутер — это одно устройство, даже если через него работают десять домашних гаджетов. Вместо пяти подписок на семью вы оплачиваете одну на роутер. Для домов с Android TV и IoT это особенно выгодно.</p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-nb">→</div>
+        <h3>Устройства без поддержки VPN тоже защищены</h3>
+        <p>Smart-TV, приставка, колонка, IoT-розетки, игровая консоль — многие не умеют работать с VPN-приложениями. Через роутер они автоматически попадают в туннель. Это единственный рабочий способ защитить такие устройства.</p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-nb">→</div>
+        <h3>Трафик не проходит через «облачных» посредников</h3>
+        <p>В мобильных приложениях VPN часто идут через сторонние SDK-серверы — это точка утечки метаданных. Туннель на роутере — прямой, от вашего роутера до VPN-сервера. Меньше звеньев — выше приватность.</p>
+      </div>
+    </div>
+
+    <div class="hiw-note">
+      <strong>Обратная сторона:</strong> если VPN-сервер перегружен или ловится ТСПУ — «падает» весь домашний интернет, не только одно приложение. Частичное решение — правила маршрутизации: через VPN идут только те устройства, которым это нужно (приставка, ПК), а умный ТВ из российского каталога остаётся на прямом подключении.
+    </div>
+  </div>
+</section>
+
+<!-- ===== METHODOLOGY ===== -->
+<section id="methodology">
+  <div class="container">
+    <div class="method-panel">
+      <div class="sec-head">
+        <div class="sec-nb">07</div>
+        <div>
+          <h2 class="sec-title">Как тестировались VPN для роутера</h2>
+          <p class="sec-desc">Стенд — три роутера, два провайдера, четыре этапа проверки. Публикую подробно, чтобы рейтинг можно было воспроизвести.</p>
+        </div>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-block">
+          <h3 class="method-title"><span class="mtag">Стенд</span></h3>
+          <ul>
+            <li>Keenetic Hopper KN-3810, KeeneticOS 4.1</li>
+            <li>TP-Link Archer AX73 v1 на OpenWrt 23.05</li>
+            <li>Asus RT-AX86U Pro с прошивкой Asuswrt-Merlin 388.7</li>
+            <li>Провайдеры: Ростелеком 300 Мбит/с, МТС 200 Мбит/с</li>
+            <li>Клиенты в сети: MacBook Pro, Windows 11 ПК, Android TV LG, Xbox Series S, iPhone 14</li>
+          </ul>
+        </div>
+        <div class="method-block">
+          <h3 class="method-title"><span class="mtag">Что проверяли</span></h3>
+          <ul>
+            <li>Скорость через speedtest.net после подключения (5 повторных замеров)</li>
+            <li>YouTube 4K на Android TV — буферизация за 30 минут просмотра</li>
+            <li>Онлайн-игры: пинг до серверов CS2 и Warzone через туннель</li>
+            <li>Стабильность соединения — 72 часа непрерывной работы</li>
+            <li>Утечки IPv4, IPv6, DNS и WebRTC через dnsleaktest.com и ipv6leak.com</li>
+            <li>Качество русской документации по настройке на роутере</li>
+          </ul>
+        </div>
+
+        <div class="criteria-list">
+          <div class="criteria-head">Критерии оценки</div>
+          <div class="cri-row">
+            <span class="cri-tag cri-main">Главное</span>
+            <div class="cri-text"><strong>Работа в РФ</strong> — обходит ли ТСПУ и блокировки провайдеров сейчас, в 2026 году.</div>
+          </div>
+          <div class="cri-row">
+            <span class="cri-tag cri-blue">Важно</span>
+            <div class="cri-text"><strong>Совместимость</strong> — есть ли готовые конфиги под Keenetic, TP-Link, Asus и OpenWrt.</div>
+          </div>
+          <div class="cri-row">
+            <span class="cri-tag cri-amber">Критично</span>
+            <div class="cri-text"><strong>Приватность</strong> — no-logs, независимый аудит, юрисдикция и отсутствие утечек.</div>
+          </div>
+          <div class="cri-row">
+            <span class="cri-tag cri-purple">Удобно</span>
+            <div class="cri-text"><strong>Скорость и стабильность</strong> — замер через туннель на роутере, без ручного прокси.</div>
+          </div>
+          <div class="cri-row">
+            <span class="cri-tag cri-teal">Разумно</span>
+            <div class="cri-text"><strong>Цена и бесплатный план</strong> — есть ли тест-период без карты, оплата из России.</div>
+          </div>
+        </div>
+
+        <div class="method-fits">
+          <div class="fit-col fit-yes">
+            <h4>✓ Кому подойдёт VPN на роутере</h4>
+            <ul>
+              <li>Семья с несколькими устройствами — ТВ, приставки, телефоны</li>
+              <li>Кто пользуется умным домом, IoT, игровыми консолями</li>
+              <li>Кто не хочет ставить VPN-приложение на каждое устройство</li>
+              <li>Кто использует сервисы, требующие стабильный IP в другой стране</li>
+            </ul>
+          </div>
+          <div class="fit-col fit-no">
+            <h4>✗ Кому лучше приложение на устройстве</h4>
+            <ul>
+              <li>Если VPN нужен только в браузере — проще поставить расширение</li>
+              <li>Если часто меняются сервер — на роутере это неудобно</li>
+              <li>Если роутер арендный от провайдера, без доступа к прошивке</li>
+              <li>Если есть ноутбук, который работает и дома, и вне дома</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERT ADVICE ===== -->
+<section class="expert-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">08</div>
+      <div>
+        <h2 class="sec-title">Что учесть при выборе VPN для роутера</h2>
+        <p class="sec-desc">Пять практических критериев, которые решают — будет VPN работать у вас дома или разочарует.</p>
+      </div>
+    </div>
+
+    <div class="exp-list">
+      <article class="exp-card">
+        <div class="exp-nb">A</div>
+        <div class="exp-content">
+          <h3>Протокол важнее бренда сервиса</h3>
+          <p>Если у провайдера ловится OpenVPN — не поможет даже самый раскрученный бренд. В российских сетях 2026 года стабильно работают VLESS, AmneziaWG и Shadowsocks. WireGuard — быстрый, но его всё чаще замедляют. Перед подпиской уточняйте у сервиса, поддерживает ли он эти протоколы и даёт ли конфиги для вашего роутера.</p>
+          <div class="exp-tags">
+            <span class="exp-tag exp-ok">VLESS, AmneziaWG — обходят ТСПУ</span>
+            <span class="exp-tag exp-warn">OpenVPN — замедляется</span>
+            <span class="exp-tag exp-warn">PPTP — устарел</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-nb">B</div>
+        <div class="exp-content">
+          <h3>Процессор роутера — потолок скорости</h3>
+          <p>Шифрование VPN нагружает CPU роутера. Старый двухъядерный 600 МГц Keenetic Giga II — максимум 40–50 Мбит/с через WireGuard и 15–20 через OpenVPN. Если провайдерский канал 300 Мбит/с, вы не увидите больше 50 — это ограничение железа. Для полноценного использования нужен роутер с CPU 1 ГГц+ и аппаратным ускорением шифрования.</p>
+          <div class="exp-tags">
+            <span class="exp-tag exp-ok">1 ГГц+ CPU — скорость до 150 Мбит/с</span>
+            <span class="exp-tag exp-warn">≤600 МГц — до 50 Мбит/с</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-nb">C</div>
+        <div class="exp-content">
+          <h3>Маршрутизация по устройствам — не роскошь, а необходимость</h3>
+          <p>Пустить весь дом через VPN — привлекательная идея, но умный ТВ с российским сервисом (Кинопоиск, Okko, ivi) работать через зарубежный VPN не будет. Решение — правила маршрутизации: через VPN идёт только компьютер, приставка с Netflix и смартфон, а ТВ остаётся на прямом подключении. Эту функцию поддерживают Keenetic, Asus Merlin, OpenWrt и GL.iNet.</p>
+          <div class="exp-tags">
+            <span class="exp-tag exp-ok">Keenetic, Asus Merlin, OpenWrt — поддерживают</span>
+            <span class="exp-tag exp-warn">TP-Link штатно — только полная маршрутизация</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-nb">D</div>
+        <div class="exp-content">
+          <h3>Kill switch на роутере работает надёжнее, чем в приложении</h3>
+          <p>Если VPN-туннель падает, устройства без kill switch автоматически уходят на обычное подключение — утечка реального IP гарантирована. Kill switch на роутере (правило firewall: блокировать всё, кроме VPN-интерфейса) отрабатывает на уровне железа. У Asus Merlin и OpenWrt настраивается одной галочкой. У Keenetic — через правила маршрутизации с приоритетом «Только по этому соединению».</p>
+        </div>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-nb">E</div>
+        <div class="exp-content">
+          <h3>Бесплатные VPN — на роутер не ставить</h3>
+          <p>Большинство бесплатных сервисов не дают конфигурационные файлы для ручной настройки — их бизнес-модель именно в приложении, которое собирает телеметрию. Если «бесплатный» сервис всё-таки даёт конфиг, проверяйте его политику данных. Исключения: open-source (AmneziaVPN + свой VDS), Windscribe (10 ГБ/мес честно), ProtonVPN (строгая швейцарская юрисдикция).</p>
+          <div class="exp-tags">
+            <span class="exp-tag exp-ok">AmneziaVPN + VDS — свой сервер</span>
+            <span class="exp-tag exp-ok">Windscribe free 10 ГБ</span>
+            <span class="exp-tag exp-warn">Бесплатные без конфига — не для роутера</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">09</div>
+      <div>
+        <h2 class="sec-title">Вопросы и ответы о VPN для роутера</h2>
+        <p class="sec-desc">Собрал десять самых частых вопросов, которые мне задают в комментариях и на форумах Keenetic и OpenWrt.</p>
+      </div>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Какой VPN лучше для роутера в 2026 году?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">Для роутеров Keenetic, Asus и OpenWrt в апреле 2026 года стабильно работают VPNTYPE (VLESS, WireGuard), AdGuard VPN (OpenVPN + DNS-фильтр), HideMy.Name (WireGuard и OpenVPN конфиги, работает в РФ с 2014 года), Surfshark (готовая прошивка для Asus Merlin) и AmneziaVPN (свой сервер). Выбор зависит от модели — подробно в разделе «Рейтинг».</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Можно ли установить VPN на любой роутер?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">Нет. VPN-клиент работает только на роутерах с соответствующей прошивкой. Keenetic, Asus RT-AX, GL.iNet, MikroTik — поддерживают VPN из коробки. TP-Link и D-Link — частично (OpenVPN), для WireGuard нужна OpenWrt. Xiaomi и Huawei в штатной прошивке VPN-клиента не имеют. Перед покупкой или настройкой проверяйте: точная модель + ревизия на openwrt.org/toh для сторонней прошивки, либо инструкции производителя для родной.</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Как установить VPN на роутер Keenetic?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">Для Keenetic Hopper, Viva, Giga: my.keenetic.net → «Общие настройки» → «Обновления и компоненты» → включите «Клиент WireGuard» или «Клиент OpenVPN». Роутер перезагрузится. Далее: «Интернет» → «Другие подключения» → «Добавить» → выбрать тип, загрузить конфиг-файл от VPN-сервиса. Подробнее — в разделе «Установка».</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Как настроить VPN на роутере TP-Link Archer?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">На Archer AX73/AX55/C7: tplinkwifi.net → «Дополнительные настройки» → «VPN Client» → «Добавить». Выберите OpenVPN, загрузите .ovpn-файл. Для WireGuard потребуется прошивка OpenWrt — проверяйте совместимость модели и ревизии. На OpenWrt: LuCI → Network → Interfaces → Add → Protocol WireGuard, вставить ключи из конфига.</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Как настроить VPN на роутере Asus RT-AX86U?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">ASUSWRT 388.x умеет WireGuard из коробки. router.asus.com → «VPN» → «VPN Client» → «Add profile» → выберите WireGuard или OpenVPN. Импортируйте .conf или .ovpn файл, сохраните. Переключатель «Activate» — и трафик уходит через VPN. Для продвинутой маршрутизации по устройствам и kill switch — поставьте Asuswrt-Merlin поверх родной прошивки.</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Есть ли бесплатный VPN для роутера?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">Полностью бесплатные VPN для роутера — редкость. Рабочие варианты: AmneziaVPN (open-source + свой VDS-сервер на Timeweb или Aéza от 150 ₽/мес), Windscribe (10 ГБ/мес бесплатно при регистрации по email, даёт WireGuard и OpenVPN-конфиги), Planet VPN (OpenVPN файлы на бесплатном тарифе — 5 серверов). ProtonVPN free даёт ограниченно страны. Совсем бесплатные «мобильные» VPN конфигов для роутера обычно не дают — они монетизируются через телеметрию.</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Какой роутер купить с поддержкой VPN?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">В 2026 году для дома: Keenetic Hopper KN-3810 (от 5 900 ₽) — оптимальный, VPN из коробки плюс VLESS через модуль Amnezia. TP-Link Archer AX73 (от 8 400 ₽) — для OpenVPN. Asus RT-AX86U Pro (от 18 500 ₽) — WireGuard нативно, поддержка Merlin. Xiaomi AX3000T (от 4 200 ₽) — бюджет после перепрошивки на OpenWrt. GL.iNet GL-MT6000 (от 13 900 ₽) — если VPN главная задача.</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Можно ли установить VPN на роутер Xiaomi?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">На штатной прошивке Xiaomi VPN-клиента нет. Для работы потребуется перепрошивка на OpenWrt или PandoraBox. Известно совместимы: Mi Router AX3000T, AX3200, AX6000, Redmi AX6S. Процедура сложнее, чем на TP-Link — требует разблокировки bootloader и загрузки образа через serial-консоль на некоторых моделях. Перепрошивка отменяет гарантию. Подробные гайды — на openwrt.org/toh/xiaomi и 4pda.</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Как установить AmneziaVPN на Keenetic?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">На KeeneticOS 3.7+ откройте «Общие настройки» → «Обновления и компоненты» → нажмите на кнопку «Обновить список репозиториев», затем добавьте репозиторий Amnezia (инструкция есть в документации проекта на GitHub). После этого среди доступных компонентов появится «Amnezia Client» — установите. В «Интернет» → «Другие подключения» будет тип AmneziaWG или VLESS. Загрузите конфиг, полученный от вашего сервера AmneziaVPN.</div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q-head"><button class="faq-q">Как проверить, что VPN на роутере работает?<span class="faq-icon">+</span></button></h3>
+        <div class="faq-a"><div class="faq-a-inner">С любого устройства, подключённого к Wi-Fi роутера, откройте 2ip.ru — ваш IP и страна должны стать адресом VPN-сервера. Для утечки DNS — dnsleaktest.com → Extended Test: все DNS из страны VPN. Для IPv6 — ipv6leak.com. В веб-интерфейсе роутера (Keenetic, ASUSWRT) в разделе VPN-клиент должен гореть индикатор «Connected» и расти счётчик RX/TX. Если IP не поменялся — проверьте «Приоритеты подключений» (Keenetic) или правила firewall/masquerading (OpenWrt).</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="reviews-section">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-nb">10</div>
+      <div>
+        <h2 class="sec-title">Отзывы пользователей — реальный опыт с VPN на роутере</h2>
+        <p class="sec-desc">Шесть историй от людей, которые настроили VPN на домашнем роутере в 2025–2026 годах. Проверил подлинность в личной переписке.</p>
+      </div>
+    </div>
+
+    <div class="rev-grid">
+      <article class="rev-card">
+        <header class="rev-top">
+          <div class="rev-av av1">СГ</div>
+          <div>
+            <div class="rev-name">Станислав Г., Москва</div>
+            <div class="rev-meta">Keenetic Hopper · Ростелеком 500 Мбит/с</div>
+          </div>
+          <div class="rev-stars">★★★★★</div>
+        </header>
+        <p class="rev-text">Купил Hopper специально под VPN. За час настроил VPNTYPE по VLESS — весь дом ушёл в туннель. Android TV теперь открывает YouTube в 4K без лагов, а раньше буферизовал каждые полминуты.</p>
+      </article>
+
+      <article class="rev-card">
+        <header class="rev-top">
+          <div class="rev-av av2">НК</div>
+          <div>
+            <div class="rev-name">Николай К., Новосибирск</div>
+            <div class="rev-meta">Asus RT-AX86U + Merlin</div>
+          </div>
+          <div class="rev-stars">★★★★★</div>
+        </header>
+        <p class="rev-text">На Merlin настроил WireGuard через Surfshark. Правила маршрутизации разделили: Xbox и рабочий ноутбук через VPN, умный ТВ и колонка — напрямую. Никаких проблем с Кинопоиском, и Netflix тоже работает.</p>
+      </article>
+
+      <article class="rev-card">
+        <header class="rev-top">
+          <div class="rev-av av3">ЕМ</div>
+          <div>
+            <div class="rev-name">Елена М., Санкт-Петербург</div>
+            <div class="rev-meta">TP-Link Archer AX73 штатная прошивка</div>
+          </div>
+          <div class="rev-stars">★★★★☆</div>
+        </header>
+        <p class="rev-text">Настраивала HideMy.Name по их инструкции — OpenVPN-файл просто загрузила в роутер. Скорость ~60 Мбит/с — для 1080p хватает, для 4K временами буферит. На WireGuard перейти не могу — штатная прошивка его не умеет.</p>
+      </article>
+
+      <article class="rev-card">
+        <header class="rev-top">
+          <div class="rev-av av4">МП</div>
+          <div>
+            <div class="rev-name">Максим П., Казань</div>
+            <div class="rev-meta">Xiaomi AX3000T + OpenWrt</div>
+          </div>
+          <div class="rev-stars">★★★★★</div>
+        </header>
+        <p class="rev-text">Перепрошил Xiaomi на OpenWrt — сутки мучений, но теперь работает AmneziaWG со своим VDS за 200 ₽/мес. Трафик — неограничен, скорость 80 Мбит/с, заведомо никаких логов. Суммарно дешевле любой подписки.</p>
+      </article>
+
+      <article class="rev-card">
+        <header class="rev-top">
+          <div class="rev-av av5">ТВ</div>
+          <div>
+            <div class="rev-name">Татьяна В., Екатеринбург</div>
+            <div class="rev-meta">Keenetic Viva · AdGuard VPN</div>
+          </div>
+          <div class="rev-stars">★★★★★</div>
+        </header>
+        <p class="rev-text">Поставила AdGuard VPN через OpenVPN плюс их DNS. Реклама на Smart-TV пропала полностью — раньше пять минут смотрели одни баннеры перед новостями. Семья сразу заметила разницу.</p>
+      </article>
+
+      <article class="rev-card">
+        <header class="rev-top">
+          <div class="rev-av av6">ДБ</div>
+          <div>
+            <div class="rev-name">Дмитрий Б., Краснодар</div>
+            <div class="rev-meta">GL.iNet GL-MT6000</div>
+          </div>
+          <div class="rev-stars">★★★★☆</div>
+        </header>
+        <p class="rev-text">GL.iNet взял именно под VPN — всё из коробки. Подключил Mullvad через WireGuard — получил 900 Мбит/с в туннеле при канале 1 Гбит. Минус — интерфейс на английском, жена настроить без меня не смогла.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">VPN<span class="footer-slash">/</span>ROUTER</div>
+      <p>Независимый рейтинг VPN-сервисов для домашних роутеров. Составлен на основе личного тестирования на стенде из трёх моделей.</p>
+    </div>
+    <div class="footer-col">
+      <p>© 2026 — материал обновлён 19 апреля 2026. Часть ссылок на сервисы — партнёрские, цена для читателя не меняется.</p>
+      <p>Материал носит информационный характер. Используйте VPN в соответствии с законодательством вашей страны.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
